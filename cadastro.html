@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#191918">
+  <meta name="description" content="Crie seu cadastro demonstrativo na Zushi.">
+  <title>Criar conta | Zushi</title>
+  <link rel="icon" type="image/png" href="assets/zushi-logo.png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+
+<body data-page="cadastro">
+  <a class="skip-link" href="#main">Pular para o conteúdo</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="Zushi — página inicial"><img src="assets/zushi-logo.png"
+          alt="Símbolo circular vermelho da Zushi" class="brand-mark"><span
+          class="brand-copy"><strong>zushi</strong><small>JAPONÊS, COM CUIDADO</small></span></a>
+      <div class="header-tools"><button class="icon-button menu-toggle" type="button" data-action="toggle-menu"
+          aria-label="Abrir menu" aria-expanded="false"><span aria-hidden="true">☰</span></button></div>
+      <nav class="primary-nav" id="primaryNav" aria-label="Navegação principal">
+        <a href="index.html" data-route="inicio">Início</a><a href="cardapio.html" data-route="cardapio">Cardápio</a><a
+          href="pedidos.html" data-route="pedidos">Pedidos</a><a href="perfil.html" data-route="perfil">Minha
+          conta</a><a href="carrinho.html" data-route="carrinho" class="nav-cart">Sacola <span class="cart-count"
+            id="cartCount">0</span></a><button class="icon-button theme-toggle nav-theme-toggle" type="button"
+          data-action="toggle-theme" aria-label="Alternar tema claro e escuro" title="Alternar tema"><span
+            aria-hidden="true">?</span></button><span class="nav-divider" aria-hidden="true"></span><a
+          class="nav-auth nav-login" href="login.html">Entrar</a><a class="button button-small button-red nav-signup"
+          href="cadastro.html">Criar conta</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1">
+    <section class="page-shell page-wrap auth-page">
+      <div class="page-heading">
+        <div class="page-heading-copy">
+          <p class="eyebrow">Sua conta Zushi</p>
+          <h1>Criar cadastro</h1>
+          <p>Deixe seus dados prontos para o próximo pedido.</p>
+        </div>
+      </div>
+      <div class="auth-page-card">
+        <p class="auth-kicker">Um pequeno ritual, toda vez</p>
+        <h2 class="auth-title">Criar sua conta</h2>
+        <p class="auth-subtitle">Preencha seus dados para a demonstração local.</p>
+        <form class="auth-form" id="registerForm" novalidate>
+          <div class="form-grid">
+            <div class="form-field full"><label for="registerName">Nome completo</label><input id="registerName"
+                name="name" type="text" maxlength="45" autocomplete="name" required
+                placeholder="Como podemos chamar você?"></div>
+            <div class="form-field full"><label for="registerEmail">E-mail</label><input id="registerEmail" name="email"
+                type="email" maxlength="45" autocomplete="email" required placeholder="voce@email.com"></div>
+            <div class="form-field"><label for="registerPhone">Celular</label><input id="registerPhone" name="phone"
+                type="tel" inputmode="numeric" maxlength="15" data-mask="phone" autocomplete="tel" required
+                placeholder="(11) 99999-9999"></div>
+            <div class="form-field"><label for="registerCity">Cidade</label><input id="registerCity" name="city"
+                maxlength="45" autocomplete="address-level2" required placeholder="Sua cidade"></div>
+            <div class="form-field"><label for="registerDistrict">Bairro</label><input id="registerDistrict"
+                name="district" maxlength="45" autocomplete="address-level3" placeholder="Seu bairro"></div>
+            <div class="form-field"><label for="registerNumber">N&#250;mero</label><input id="registerNumber"
+                name="addressNumber" type="text" maxlength="10" required placeholder="123"></div>
+            <div class="form-field full"><label for="registerStreet">Rua</label><input id="registerStreet" name="street"
+                maxlength="60" autocomplete="street-address" required placeholder="Rua, avenida ou praça"></div>
+            <div class="form-field full"><label for="registerPassword">Senha</label><input id="registerPassword"
+                name="password" type="password" minlength="8" maxlength="32" autocomplete="new-password" required
+                placeholder="Mínimo de 8 caracteres"></div>
+          </div>
+          <div class="form-actions"><button class="button button-red" type="submit">Criar conta</button>
+            <p class="form-error" id="registerError" aria-live="polite"></p>
+          </div>
+        </form>
+        <p class="auth-switch">Já faz parte? <a href="login.html">Entrar na conta</a></p>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-top">
+      <a class="brand footer-brand" href="index.html" aria-label="Zushi — voltar ao início"><img
+          src="assets/zushi-logo.png" alt="" class="brand-mark"><span
+          class="brand-copy"><strong>zushi</strong><small>JAPONÊS, COM CUIDADO</small></span></a>
+      <p>O tempo certo, o corte preciso,<br>um momento só seu.</p>
+      <div class="footer-links"><a href="cardapio.html">Nosso cardápio</a><a href="pedidos.html">Acompanhar pedido</a><a
+          href="perfil.html">Minha conta</a></div>
+    </div>
+    <div class="footer-bottom"><span>© <span id="currentYear"></span> Zushi. Feito com cuidado.</span><span>Uma pausa
+        com sabor de Japão <span class="footer-jp" lang="ja">いただきます</span></span></div>
+  </footer>
+  <div class="toast-region" id="toastRegion" role="status" aria-live="polite"></div>
+</body>
+
+</html>

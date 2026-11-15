@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#191918">
+  <meta name="description" content="Acesse e atualize seus dados de perfil da Zushi.">
+  <title>Minha conta | Zushi</title>
+  <link rel="icon" type="image/png" href="assets/zushi-logo.png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+
+<body data-page="perfil">
+  <a class="skip-link" href="#main">Pular para o conteúdo</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="Zushi — página inicial"><img src="assets/zushi-logo.png"
+          alt="Símbolo circular vermelho da Zushi" class="brand-mark"><span
+          class="brand-copy"><strong>zushi</strong><small>JAPONÊS, COM CUIDADO</small></span></a>
+      <div class="header-tools"><button class="icon-button menu-toggle" type="button" data-action="toggle-menu"
+          aria-label="Abrir menu" aria-expanded="false"><span aria-hidden="true">☰</span></button></div>
+      <nav class="primary-nav" id="primaryNav" aria-label="Navegação principal">
+        <a href="index.html" data-route="inicio">Início</a><a href="cardapio.html" data-route="cardapio">Cardápio</a><a
+          href="pedidos.html" data-route="pedidos">Pedidos</a><a href="perfil.html" data-route="perfil">Minha
+          conta</a><a href="carrinho.html" data-route="carrinho" class="nav-cart">Sacola <span class="cart-count"
+            id="cartCount">0</span></a><button class="icon-button theme-toggle nav-theme-toggle" type="button"
+          data-action="toggle-theme" aria-label="Alternar tema claro e escuro" title="Alternar tema"><span
+            aria-hidden="true">?</span></button><span class="nav-divider" aria-hidden="true"></span><a
+          class="nav-auth nav-login" href="login.html">Entrar</a><a class="button button-small button-red nav-signup"
+          href="cadastro.html">Criar conta</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1">
+    <section class="page-shell page-wrap">
+      <div class="page-heading">
+        <div class="page-heading-copy">
+          <p class="eyebrow">Seu espaço Zushi</p>
+          <h1>Minha conta</h1>
+          <p>Seus dados, para que cada próximo pedido seja mais simples.</p>
+        </div>
+      </div>
+      <div id="profileGuest" hidden></div>
+      <div class="profile-layout" id="profileAccount" hidden>
+        <aside class="profile-aside">
+          <div class="profile-avatar" id="profileAvatar" aria-hidden="true">Z</div>
+          <h2 id="profileDisplayName"></h2>
+          <p id="profileDisplayEmail"></p><button class="button button-plain button-small" type="button"
+            data-action="logout">Sair da conta</button>
+        </aside>
+        <section class="profile-panel">
+          <h2>Dados pessoais</h2>
+          <p>Atualize seus dados de contato e endereço.</p>
+          <form id="profileForm" novalidate>
+            <div class="form-grid">
+              <div class="form-field full"><label for="profileName">Nome completo</label><input id="profileName"
+                  name="name" maxlength="45" autocomplete="name" required></div>
+              <div class="form-field"><label for="profileEmail">E-mail</label><input id="profileEmail" name="email"
+                  type="email" maxlength="45" autocomplete="email" required></div>
+              <div class="form-field"><label for="profilePhone">Telefone</label><input id="profilePhone" name="phone"
+                  type="tel" inputmode="numeric" maxlength="15" data-mask="phone" autocomplete="tel"
+                  placeholder="(11) 99999-9999"></div>
+              <div class="form-field"><label for="profileCity">Cidade</label><input id="profileCity" name="city"
+                  maxlength="45" autocomplete="address-level2" required></div>
+              <div class="form-field"><label for="profileDistrict">Bairro</label><input id="profileDistrict"
+                  name="district" maxlength="45" autocomplete="address-level3"></div>
+              <div class="form-field"><label for="profileAddressNumber">N&#250;mero</label><input
+                  id="profileAddressNumber" name="addressNumber" maxlength="10" autocomplete="address-line2" required
+                  placeholder="123"></div>
+              <div class="form-field full"><label for="profileStreet">Rua</label><input id="profileStreet" name="street"
+                  maxlength="60" required autocomplete="street-address" placeholder="Rua, avenida ou praça"></div>
+            </div>
+            <div class="form-actions"><button class="button button-red" type="submit">Salvar alterações</button>
+              <p class="form-error" id="profileError" aria-live="polite"></p>
+            </div>
+          </form>
+          <div class="form-actions"><button class="button button-plain" type="button"
+              data-action="export-users">Exportar users.json</button><button class="button button-plain" type="button"
+              data-action="export-orders">Exportar orders.json</button></div>
+        </section>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-top">
+      <a class="brand footer-brand" href="index.html" aria-label="Zushi — voltar ao início"><img
+          src="assets/zushi-logo.png" alt="" class="brand-mark"><span
+          class="brand-copy"><strong>zushi</strong><small>JAPONÊS, COM CUIDADO</small></span></a>
+      <p>O tempo certo, o corte preciso,<br>um momento só seu.</p>
+      <div class="footer-links"><a href="cardapio.html">Nosso cardápio</a><a href="pedidos.html">Acompanhar pedido</a><a
+          href="perfil.html">Minha conta</a></div>
+    </div>
+    <div class="footer-bottom"><span>© <span id="currentYear"></span> Zushi. Feito com cuidado.</span><span>Uma pausa
+        com sabor de Japão <span class="footer-jp" lang="ja">いただきます</span></span></div>
+  </footer>
+  <div class="toast-region" id="toastRegion" role="status" aria-live="polite"></div>
+</body>
+
+</html>

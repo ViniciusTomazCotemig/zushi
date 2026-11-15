@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#191918" />
+  <meta name="description" content="Delivery japonês preparado com cuidado, entregue no seu ritmo." />
+  <title>Zushi — Japonês feito com cuidado</title>
+  <link rel="icon" type="image/png" href="assets/zushi-logo.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="app.js" defer></script>
+</head>
+
+<body data-page="inicio">
+  <a class="skip-link" href="#main">Pular para o conteúdo</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="Zushi — página inicial"><img src="assets/zushi-logo.png"
+          alt="Símbolo circular vermelho da Zushi" class="brand-mark" /><span
+          class="brand-copy"><strong>zushi</strong><small>JAPONÊS, COM CUIDADO</small></span></a>
+      <div class="header-tools">
+        <button class="icon-button menu-toggle" type="button" data-action="toggle-menu" aria-label="Abrir menu"
+          aria-expanded="false">
+          <span aria-hidden="true">☰</span>
+        </button>
+      </div>
+      <nav class="primary-nav" id="primaryNav" aria-label="Navegação principal">
+        <a href="index.html" data-route="inicio">Início</a><a href="cardapio.html" data-route="cardapio">Cardápio</a><a
+          href="pedidos.html" data-route="pedidos">Pedidos</a><a href="perfil.html" data-route="perfil">Minha
+          conta</a><a href="carrinho.html" data-route="carrinho" class="nav-cart">Sacola <span class="cart-count"
+            id="cartCount">0</span></a><button class="icon-button theme-toggle nav-theme-toggle" type="button"
+          data-action="toggle-theme" aria-label="Alternar tema claro e escuro" title="Alternar tema">
+          <span aria-hidden="true">?</span></button><span class="nav-divider" aria-hidden="true"></span><a
+          class="nav-auth nav-login" href="login.html">Entrar</a><a class="button button-small button-red nav-signup"
+          href="cadastro.html">Criar conta</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1">
+    <section class="page-wrap hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Delivery japonês · feito com cuidado</p>
+        <h1>O Japão à mesa.<br /><em>No seu tempo.</em></h1>
+        <p class="hero-lede">
+          Peixe fresco, mãos cuidadosas e a beleza do simples. Um convite para
+          fazer da próxima refeição um momento especial.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-red" href="cardapio.html">Explorar o cardápio <span aria-hidden="true">↗</span></a><a
+            class="button" href="#sobre">Conheça a Zushi</a>
+        </div>
+        <form class="hero-search" id="heroSearchForm" role="search" action="cardapio.html">
+          <input id="heroSearch" name="search" type="search" maxlength="60"
+            placeholder="O que você está com vontade de comer?" aria-label="Buscar no cardápio" /><button type="submit"
+            aria-label="Buscar">Buscar&nbsp; ↗</button>
+        </form>
+        <div class="hero-note">
+          ENTREGA CUIDADOSA · INGREDIENTES SELECIONADOS
+        </div>
+      </div>
+      <div class="hero-visual" aria-label="Seleção de sushi preparada pela Zushi">
+        <span class="hero-kana" lang="ja" aria-hidden="true">寿司</span>
+        <div class="hero-photo-frame">
+          <img src="assets/sushi-platter.jpg" alt="Seleção de sushi e niguiris servida à mesa" />
+        </div>
+        <div class="hero-seal">
+          <span lang="ja">心を込めて<b>FEITO COM CUIDADO</b></span>
+        </div>
+      </div>
+    </section>
+    <section class="intro-strip">
+      <div class="page-wrap strip-inner">
+        <div class="strip-item">
+          <span class="strip-no">一</span>
+          <div>
+            <strong>Frescor de verdade</strong><span>Ingredientes escolhidos a cada dia.</span>
+          </div>
+        </div>
+        <div class="strip-item">
+          <span class="strip-no">二</span>
+          <div>
+            <strong>Feito na hora</strong><span>Cada pedido recebe atenção.</span>
+          </div>
+        </div>
+        <div class="strip-item">
+          <span class="strip-no">三</span>
+          <div>
+            <strong>Chega com cuidado</strong><span>Do nosso balcão até a sua mesa.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="page-wrap section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Uma seleção da casa</p>
+          <h2>Pequenos favoritos.</h2>
+          <p>Feitos com atenção. Escolhidos para hoje.</p>
+        </div>
+        <a class="text-link" href="cardapio.html">Ver o cardápio completo</a>
+      </div>
+      <div class="product-grid">
+        <article class="product-card" data-product-card data-category="Combinados"
+          data-name="combinado aurora salmão atum rolls">
+          <div class="product-photo">
+            <img src="assets/chef-selection.jpg" alt="Combinado Aurora de sushi" loading="lazy" /><span
+              class="product-tag">Mais pedido</span>
+          </div>
+          <div class="product-info">
+            <div class="product-topline">
+              <h3>Combinado Aurora</h3>
+              <span class="product-price">R$ 68,00</span>
+            </div>
+            <p class="product-description">
+              12 peças, salmão, atum e delicados rolls da casa.
+            </p>
+            <div class="product-actions">
+              <span class="product-meta">12 peças · serve 1</span><button class="add-button" type="button"
+                data-action="add" data-id="combo-aurora" aria-label="Adicionar Combinado Aurora à sacola">
+                +
+              </button>
+            </div>
+          </div>
+        </article>
+        <article class="product-card" data-product-card data-category="Niguiris"
+          data-name="niguiri salmão fresco arroz">
+          <div class="product-photo">
+            <img src="assets/salmon-nigiri.jpg" alt="Niguiri de salmão" loading="lazy" /><span
+              class="product-tag">Clássico</span>
+          </div>
+          <div class="product-info">
+            <div class="product-topline">
+              <h3>Niguiri de salmão</h3>
+              <span class="product-price">R$ 32,00</span>
+            </div>
+            <p class="product-description">
+              Salmão fresco sobre arroz temperado no ponto certo.
+            </p>
+            <div class="product-actions">
+              <span class="product-meta">6 peças · clássico</span><button class="add-button" type="button"
+                data-action="add" data-id="nigiri-salmao" aria-label="Adicionar Niguiri de salmão à sacola">
+                +
+              </button>
+            </div>
+          </div>
+        </article>
+        <article class="product-card" data-product-card data-category="Combinados"
+          data-name="seleção chef sazonal sabores">
+          <div class="product-photo">
+            <img src="assets/sushi-selection.jpg" alt="Seleção do chef" loading="lazy" /><span class="product-tag">Da
+              estação</span>
+          </div>
+          <div class="product-info">
+            <div class="product-topline">
+              <h3>Seleção do chef</h3>
+              <span class="product-price">R$ 92,00</span>
+            </div>
+            <p class="product-description">
+              Uma seleção sazonal feita para descobrir novos sabores.
+            </p>
+            <div class="product-actions">
+              <span class="product-meta">16 peças · serve 1–2</span><button class="add-button" type="button"
+                data-action="add" data-id="selecionado-chef" aria-label="Adicionar Seleção do chef à sacola">
+                +
+              </button>
+            </div>
+          </div>
+        </article>
+        <article class="product-card" data-product-card data-category="Sashimis" data-name="sashimi salmão frescor">
+          <div class="product-photo">
+            <img src="assets/nigiri-special.jpg" alt="Sashimi de salmão" loading="lazy" /><span
+              class="product-tag">Fresco do dia</span>
+          </div>
+          <div class="product-info">
+            <div class="product-topline">
+              <h3>Sashimi de salmão</h3>
+              <span class="product-price">R$ 46,00</span>
+            </div>
+            <p class="product-description">
+              Fatias precisas, textura delicada e frescor de origem.
+            </p>
+            <div class="product-actions">
+              <span class="product-meta">8 fatias</span><button class="add-button" type="button" data-action="add"
+                data-id="sashimi-salmao" aria-label="Adicionar Sashimi de salmão à sacola">
+                +
+              </button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section class="page-wrap section-compact" id="sobre">
+      <div class="philosophy">
+        <div class="philosophy-mark">
+          <img src="assets/zushi-logo.png" alt="Símbolo vermelho da marca Zushi" />
+        </div>
+        <div class="philosophy-copy">
+          <p class="eyebrow">Nossa maneira de fazer</p>
+          <h2>Menos pressa.<br />Mais presença.</h2>
+          <p>
+            A cozinha japonesa nos ensina que o cuidado está nos detalhes: no
+            arroz, no corte, no tempo. A Zushi traz esse jeito de fazer para
+            cada entrega, para você desacelerar e apreciar o agora.
+          </p>
+          <a href="cardapio.html" class="text-link">Encontrar seu próximo favorito</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-top">
+      <a class="brand footer-brand" href="index.html" aria-label="Zushi — voltar ao início"><img
+          src="assets/zushi-logo.png" alt="" class="brand-mark" /><span
+          class="brand-copy"><strong>zushi</strong><small>JAPONÊS, COM CUIDADO</small></span></a>
+      <p>O tempo certo, o corte preciso,<br />um momento só seu.</p>
+      <div class="footer-links">
+        <a href="cardapio.html">Nosso cardápio</a><a href="pedidos.html">Acompanhar pedido</a><a
+          href="perfil.html">Minha conta</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="currentYear"></span> Zushi. Feito com cuidado.</span><span>Uma pausa com sabor de Japão
+        <span class="footer-jp" lang="ja">いただきます</span></span>
+    </div>
+  </footer>
+  <div class="toast-region" id="toastRegion" role="status" aria-live="polite"></div>
+</body>
+
+</html>

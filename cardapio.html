@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#191918">
+  <meta name="description" content="Explore combinados, niguiris, sashimis, makis e temakis da Zushi.">
+  <title>Cardápio japonês | Zushi</title>
+  <link rel="icon" type="image/png" href="assets/zushi-logo.png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body data-page="cardapio">
+  <a class="skip-link" href="#main">Pular para o conteúdo</a>
+  <header class="site-header"><div class="header-inner">
+    <a class="brand" href="index.html" aria-label="Zushi — página inicial"><img src="assets/zushi-logo.png" alt="Símbolo circular vermelho da Zushi" class="brand-mark"><span class="brand-copy"><strong>zushi</strong><small>JAPONÊS, COM CUIDADO</small></span></a>
+    <div class="header-tools"><button class="icon-button menu-toggle" type="button" data-action="toggle-menu" aria-label="Abrir menu" aria-expanded="false"><span aria-hidden="true">☰</span></button></div>
+    <nav class="primary-nav" id="primaryNav" aria-label="Navegação principal">
+      <a href="index.html" data-route="inicio">Início</a><a href="cardapio.html" data-route="cardapio">Cardápio</a><a href="pedidos.html" data-route="pedidos">Pedidos</a><a href="perfil.html" data-route="perfil">Minha conta</a><a href="carrinho.html" data-route="carrinho" class="nav-cart">Sacola <span class="cart-count" id="cartCount">0</span></a><button class="icon-button theme-toggle nav-theme-toggle" type="button" data-action="toggle-theme" aria-label="Alternar tema claro e escuro" title="Alternar tema"><span aria-hidden="true">?</span></button><span class="nav-divider" aria-hidden="true"></span><a class="nav-auth nav-login" href="login.html">Entrar</a><a class="button button-small button-red nav-signup" href="cadastro.html">Criar conta</a>
+    </nav>
+  </div></header>
+  <main id="main" tabindex="-1"><section class="page-shell page-wrap">
+    <div class="page-heading"><div class="page-heading-copy"><p class="eyebrow">Preparado com intenção</p><h1>Nosso cardápio</h1><p>Escolhas frescas e combinações que respeitam cada ingrediente.</p></div><span class="heading-count" id="catalogCount">8 itens da casa</span></div>
+    <div class="catalog-toolbar"><label class="search-field"><span class="search-icon" aria-hidden="true">⌕</span><input type="search" id="productSearch" maxlength="60" autocomplete="off" placeholder="Busque por nome ou ingrediente" aria-label="Buscar produtos"></label><div class="category-list" role="group" aria-label="Filtrar por categoria"><button type="button" class="category-button active" data-action="category" data-category="Todos" aria-pressed="true">Todos</button><button type="button" class="category-button" data-action="category" data-category="Combinados" aria-pressed="false">Combinados</button><button type="button" class="category-button" data-action="category" data-category="Niguiris" aria-pressed="false">Niguiris</button><button type="button" class="category-button" data-action="category" data-category="Sashimis" aria-pressed="false">Sashimis</button><button type="button" class="category-button" data-action="category" data-category="Makis" aria-pressed="false">Makis</button><button type="button" class="category-button" data-action="category" data-category="Temakis" aria-pressed="false">Temakis</button></div></div>
+    <div class="product-grid" id="catalogGrid" aria-live="polite"></div><div class="no-results" id="catalogNoResults" hidden>Não encontramos esse sabor. Tente outro nome ou ingrediente.</div>
+  </section></main>
+  <template id="productCardTemplate"><article class="product-card" data-product-card><div class="product-photo"><img data-product-image alt="" loading="lazy"><span class="product-tag" data-product-tag hidden></span></div><div class="product-info"><div class="product-topline"><h3 data-product-name></h3><span class="product-price" data-product-price></span></div><p class="product-description" data-product-description></p><div class="product-actions"><span class="product-meta" data-product-meta></span><button class="add-button" type="button" data-action="add" aria-label="Adicionar produto à sacola">+</button></div></div></article></template>
+  <footer class="site-footer"><div class="footer-top">
+    <a class="brand footer-brand" href="index.html" aria-label="Zushi — voltar ao início"><img src="assets/zushi-logo.png" alt="" class="brand-mark"><span class="brand-copy"><strong>zushi</strong><small>JAPONÊS, COM CUIDADO</small></span></a>
+    <p>O tempo certo, o corte preciso,<br>um momento só seu.</p>
+    <div class="footer-links"><a href="cardapio.html">Nosso cardápio</a><a href="pedidos.html">Acompanhar pedido</a><a href="perfil.html">Minha conta</a></div>
+  </div><div class="footer-bottom"><span>© <span id="currentYear"></span> Zushi. Feito com cuidado.</span><span>Uma pausa com sabor de Japão <span class="footer-jp" lang="ja">いただきます</span></span></div></footer>
+  <div class="toast-region" id="toastRegion" role="status" aria-live="polite"></div>
+</body>
+</html>

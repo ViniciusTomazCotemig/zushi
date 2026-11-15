@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#191918">
+  <meta name="description" content="Entre na sua conta Zushi para acompanhar pedidos.">
+  <title>Entrar na Zushi</title>
+  <link rel="icon" type="image/png" href="assets/zushi-logo.png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+
+<body data-page="login">
+  <a class="skip-link" href="#main">Pular para o conteúdo</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="Zushi — página inicial"><img src="assets/zushi-logo.png"
+          alt="Símbolo circular vermelho da Zushi" class="brand-mark"><span
+          class="brand-copy"><strong>zushi</strong><small>JAPONÊS, COM CUIDADO</small></span></a>
+      <div class="header-tools"><button class="icon-button menu-toggle" type="button" data-action="toggle-menu"
+          aria-label="Abrir menu" aria-expanded="false"><span aria-hidden="true">☰</span></button></div>
+      <nav class="primary-nav" id="primaryNav" aria-label="Navegação principal">
+        <a href="index.html" data-route="inicio">Início</a><a href="cardapio.html" data-route="cardapio">Cardápio</a><a
+          href="pedidos.html" data-route="pedidos">Pedidos</a><a href="perfil.html" data-route="perfil">Minha
+          conta</a><a href="carrinho.html" data-route="carrinho" class="nav-cart">Sacola <span class="cart-count"
+            id="cartCount">0</span></a><button class="icon-button theme-toggle nav-theme-toggle" type="button"
+          data-action="toggle-theme" aria-label="Alternar tema claro e escuro" title="Alternar tema"><span
+            aria-hidden="true">?</span></button><span class="nav-divider" aria-hidden="true"></span><a
+          class="nav-auth nav-login" href="login.html">Entrar</a><a class="button button-small button-red nav-signup"
+          href="cadastro.html">Criar conta</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1">
+    <section class="page-shell page-wrap auth-page">
+      <div class="page-heading">
+        <div class="page-heading-copy">
+          <p class="eyebrow">Sua conta Zushi</p>
+          <h1>Entrar</h1>
+          <p>Entre para acompanhar seus pedidos guardados neste navegador.</p>
+        </div>
+      </div>
+      <div class="auth-page-card">
+        <p class="auth-kicker">Que bom ver você</p>
+        <h2 class="auth-title">Entrar na Zushi</h2>
+        <p class="auth-subtitle">Acesse seus dados e acompanhe seus pedidos.</p>
+        <form class="auth-form" id="loginForm" novalidate>
+          <div class="form-grid">
+            <div class="form-field full"><label for="loginEmail">E-mail</label><input id="loginEmail" name="email"
+                type="email" maxlength="45" autocomplete="email" required placeholder="voce@email.com"></div>
+            <div class="form-field full"><label for="loginPassword">Senha</label><input id="loginPassword"
+                name="password" type="password" maxlength="32" autocomplete="current-password" required
+                placeholder="Sua senha"></div>
+          </div>
+          <div class="form-actions"><button class="button button-red" type="submit">Entrar</button>
+            <p class="form-error" id="loginError" aria-live="polite"></p>
+          </div>
+        </form>
+        <p class="auth-switch">Ainda não tem conta? <a href="cadastro.html">Criar cadastro</a></p>
+        
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-top">
+      <a class="brand footer-brand" href="index.html" aria-label="Zushi — voltar ao início"><img
+          src="assets/zushi-logo.png" alt="" class="brand-mark"><span
+          class="brand-copy"><strong>zushi</strong><small>JAPONÊS, COM CUIDADO</small></span></a>
+      <p>O tempo certo, o corte preciso,<br>um momento só seu.</p>
+      <div class="footer-links"><a href="cardapio.html">Nosso cardápio</a><a href="pedidos.html">Acompanhar pedido</a><a
+          href="perfil.html">Minha conta</a></div>
+    </div>
+    <div class="footer-bottom"><span>© <span id="currentYear"></span> Zushi. Feito com cuidado.</span><span>Uma pausa
+        com sabor de Japão <span class="footer-jp" lang="ja">いただきます</span></span></div>
+  </footer>
+  <div class="toast-region" id="toastRegion" role="status" aria-live="polite"></div>
+</body>
+
+</html>
